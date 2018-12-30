@@ -1,0 +1,19 @@
+{
+  "name": "ip-stack",
+  "version": "1.0.0",
+  "description": "\"Attains information about an IP address\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: Something went wrong :(\\\" && exit 1\" "
+  },
+  "keywords": [
+    "ip"
+  ],
+  "author": "Jennifer Xu",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
