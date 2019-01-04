@@ -7,7 +7,8 @@ import requests
 # __name__ replaces it with the name of the current module
 app = Flask(__name__)
 
-apiKey = '9a1e74f96964cbac369d4c6d942de867'
+ipKey = '9a1e74f96964cbac369d4c6d942de867'
+#mapKey
 
 # Connect to 'results.html' after a form has been submitted
 @app.route('/results', methods=['POST'])
@@ -17,17 +18,21 @@ def displayResults():
     inputIpAddress = request.form['ipAddress']
 
     # Piece together the api address and sent a request
-    apiAddress = 'http://api.ipstack.com/' + inputIpAddress + '?access_key=' + apiKey
+    apiAddress = 'http://api.ipstack.com/' + inputIpAddress + '?access_key=' + ipKey
     req = requests.get(apiAddress)
 
     # parse the response using json
     res = req.json()
 
     # specifically grab the country name
-    info = res['country_name']
-
+    lat = res['latitude']
+    long = res['longitude']
+    
+    # Add in the google maps API 
+    imageLink = 'https://maps.googleapis.com/maps/api/staticmap?center=' + lat + ',' + long + '&size=464x250&zoom=9&scale=1&key=' + mapKey
+    
     # open 'results.html' giving the information 'location'
-    return render_template('results.html', location=info)
+    return render_template('results.html', location=info, map=imageLink)
 
 
 # Connect to index.html as the root page
