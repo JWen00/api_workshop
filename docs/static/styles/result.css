@@ -1,0 +1,21 @@
+body{
+	background: #c2d5e3;
+}
+.container{
+	background: white;
+	margin-top: 15%;
+	border-radius: 5px;
+}
+p{
+	display: block;
+	padding: 15px 3px;
+	width: 100%;
+	font-family: 'Ubuntu', sans-serif;
+}
+h1{
+	position: relative;
+	top: -30px;
+	height: 0px;
+	font-family: 'Anton', sans-serif;
+	text-shadow: 2px 2px 8px #aaa;
+}
