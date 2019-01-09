@@ -5,10 +5,13 @@ from flask import Flask, render_template, request
 import requests
 
 # __name__ replaces it with the name of the current module
-app = Flask(__name__)
+# app = Flask(__name__)
+
+# Changed it to make it work with repl 
+app = Flask(__name__, static_folder='.', root_path='/root/runner') 
 
 ipKey = '9a1e74f96964cbac369d4c6d942de867'
-#mapKey
+mapKey = 'AIzaSyBuwAiyYR_IV5y8bD2wLyudCgPquB2qSVM'
 
 # Connect to 'results.html' after a form has been submitted
 @app.route('/results', methods=['POST'])
@@ -42,4 +45,6 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run() 
+    # Changed it to work on repl.it 
+    app.run(host='0.0.0.0', port='3000')
