@@ -27,12 +27,13 @@ def displayResults():
     # parse the response using json
     res = req.json()
 
-    # specifically grab the country name
+    # specifically grab the country name, lat and lon
+    info = res['country_name']
     lat = res['latitude']
-    long = res['longitude']
+    lon = res['longitude']
     
     # Add in the google maps API 
-    imageLink = 'https://maps.googleapis.com/maps/api/staticmap?center=' + lat + ',' + long + '&size=464x250&zoom=9&scale=1&key=' + mapKey
+    imageLink = 'https://maps.googleapis.com/maps/api/staticmap?center=' + lat + ',' + lon + '&size=464x250&zoom=9&scale=1&key=' + mapKey
     
     # open 'results.html' giving the information 'location'
     return render_template('results.html', location=info, map=imageLink)
