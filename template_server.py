@@ -3,7 +3,6 @@
 from flask import Flask, render_template, request
 import requests
 app = Flask(__name__)
-apiKey = '9a1e74f96964cbac369d4c6d942de867'
 
 ################################################
 # ADD YOUR CODE HERE 

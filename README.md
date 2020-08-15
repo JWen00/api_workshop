@@ -1,37 +1,23 @@
-# Web-Dev Workshop (Summer 2019) 
+# api-workshop
 
-This workshop aims to teach students about API's and the basics of connecting backend with frontend using _flask_.
+This workshop aims to teach students about API's and the basics of connecting backend with frontend using `flask`.
 
-The entire workshop is expected to run for the day, with the only requirements being access to [repl.it](https://repl.it/languages/python3).
+The workshop was designed to be a one day workshop where students were encourage to be creative with the results of the api call. 
 
-The css and html files are provided to the students in _templates_.
+## How to run
+To run the server
+```
+python3 server.py 
+```
+Then open `http://localhost:5000`
 
-
+## Acknowledgements 
 ### IP Stack
+[ipStack](https://ipstack.com/) was used to retrieve information about an IP address. 
 
-ApiKey for the IP address is retrieved from [ipStack](https://ipstack.com/)  
+### GoogleMaps 
+Google Maps was used to retrieve an image of where the IP is located. 
 
-
-### GoogleMaps ApiKey
-
-ApiKey for GoogleMaps has to be supplied. 
-
-```
- imageLink = 'https://maps.googleapis.com/maps/api/staticmap?center=' + str(lat) + ',' + str(lon) + '&size=555x300&zoom=12&scale=4&key=' + mapKey
-```
-
-
-### Setup 
-
-```
-python3 server.py
-```
-
-### Disclaimer 
-
-I wrote this before I officially learnt flask so.. mhmm :)
-
-There is also an _api nodejs version_ which we scrapped because we thought the students were better off sticking to python since the week-long workshop was entirely python. 
 
 
 
