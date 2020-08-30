@@ -2,7 +2,7 @@
 
 This workshop aims to teach students about API's and the basics of connecting backend with frontend using `flask`.
 
-The workshop was designed to be a one day workshop where students where encouraged to be creative with the results of the api call. 
+The workshop was designed to be a one day workshop where students were encouraged to be creative with the results of the api call. 
 
 ## How to run
 To run the server
